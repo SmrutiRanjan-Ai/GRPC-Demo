@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package comm;
+
+message  Request{
+    string name =1;
+}
+
+message Response{
+    string serial=1;
+    bool status=2;
+}
+
+service Comm{
+    rpc GetSerialNumber(Request) returns (Response);
+}
